@@ -1,4 +1,5 @@
-/utility/
+/businesslogic/
+/controller/
 /dao/
 /model/
-/controller/
+/utility/

@@ -1,6 +1,5 @@
 package utility;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -38,5 +37,3 @@ public class ConnectionManager{
 	return prop;
 	}
 }
-
-

@@ -1,6 +1,5 @@
 package dao;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +11,7 @@ public class UserDAO implements UserDAOInterface{
 	public int signUp(User user) {
 		try {
 			Connection con = ConnectionManager.getConnection();
-			String sql="insert into userdetails(email,password)values(?,?)";
+			String sql="insert into USERS(email,password)values(?,?)";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1,user.getEmail());
 			st.setString(2, user.getPassword());
@@ -29,7 +28,7 @@ public class UserDAO implements UserDAOInterface{
 	public boolean loginUser(User user) {
 		try {
 			Connection con = ConnectionManager.getConnection();
-			String sql="select * from userdetails";
+			String sql="select * from USERS";
 			PreparedStatement st = con.prepareStatement(sql);
 			ResultSet rs = st.executeQuery(sql);
 			while(rs.next()) {
